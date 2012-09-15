@@ -488,3 +488,22 @@
 	}
 }
 
+.splash {
+   align: center;
+}
+
+			
+	.ad_container{
+		display:block;
+		height:112px;
+		margin:20px auto 10px;
+		position:relative;
+		overflow:hidden;
+		width:100%;
+		z-index:9999;
+	}
+
+	.ad_container_script{
+		-webkit-border-radius:6px;
+		border:solid 10px #3f3f3f;
+	}
