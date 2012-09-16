@@ -5,26 +5,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>
         </title>
-        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
-        <link rel="stylesheet" href="my.css" />
+        <link rel="stylesheet" href="css/jquerymobile.css" />
+        <link rel="stylesheet" href="css/my.css" />
         <style>
             /* App custom styles */
         </style>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
-        </script>
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.0/jquery.mobile-1.1.0.min.js">
-        </script>
-        <script src="my.js">
-        </script>
-		<script src="http://1.2.3.4/bmi-int-js/bmi.js?version=1338199682" language="javascript"></script>
+        <script src="js/my.js"></script>
+		<script type="text/javascript" src="js/jquerymobile.js"></script>
+		<script src="js/jquery.js"></script>
     </head>
     <body>
         <!-- Millwright -->
-		<div data-role="page" data-theme="b" id="splash" style="background-color: #fff;">
-			<div class="splash">
-				<img style="width: 100%; height: px" src="http://unionxtreme.com/images/apps/millwright/splash.jpg" alt="splash" />
-			</div>
-		</div>
+
 		
         <div data-role="page" data-theme="a" id="page1" style="background: url('http://assets.codiqa.com/ps/26635/77f03564033d02e8bg.gif') repeat">
             <div data-theme="a" data-role="header">
@@ -32,7 +24,6 @@
                     Millwright
                 </h1>
             </div>
-			
 				<div class="ad_container">
 						<div class="ad_container_script">
 							<script type="text/javascript"><!--
@@ -94,9 +85,10 @@
 			
         </div>
         <!-- Buy American -->
-        <div data-role="page" data-theme="a" id="page2" style="background: url('http://assets.codiqa.com/ps/26635/77f03564033d02e8bg.gif') repeat">
+        <div data-role="page" data-theme="a" id="page2" >
             <div data-theme="a" data-role="toolbar">
-                <h1>
+                <a href="#page1" data-icon="home">Home</a>
+				<h1>
                     Buy American
                 </h1>
 				<a class="button back" href="#">Back</a>
@@ -107,10 +99,11 @@
 
  
 		<!-- conversions -->
-        <div data-role="page" data-theme="a" id="page3" style="background: url('http://assets.codiqa.com/ps/26635/77f03564033d02e8bg.gif') repeat">
+        <div data-role="page" data-theme="a" id="page3">
 			
             <div data-theme="a" data-role="header">
-                <h1>
+                <a href="#page1" data-icon="home">Home</a>
+				<h1>
                     Conversions
                 </h1>
             </div>
@@ -138,35 +131,27 @@
    			<ul data-role="listview" data-divider-theme="e" data-inset="true">
 				<li data-theme="a">
 					<a href="#area-converter" >Area Conversion</a>
-					<small class="counter">9</small>
 				</li>
 				<li data-theme="a">
 					<a href="#length-converter" >Length Conversion</a>
-					<small class="counter">10</small>
 				</li>
 				<li data-theme="a">
 					<a href="#liquid-converter" >Liquid Conversion</a>
-					<small class="counter">7</small>
 				</li>
 				<li data-theme="a">
 					<a href="#pressure-converter" >Pressure Conversion</a>
-					<small class="counter">5</small>
 				</li>
 				<li data-theme="a">
 					<a href="#temperature-converter" >Temperature Conversion</a>
-					<small class="counter">5</small>
 				</li>
 				<li data-theme="a">
 					<a href="#time-converter" >Time Conversion</a>
-					<small class="counter">8</small>
 				</li>
 				<li data-theme="a">
 					<a href="#velocity-converter" >Velocity Conversion</a>
-					<small class="counter">4</small>
 				</li>
 				<li data-theme="a">
 					<a href="#weight-converter" >Weight Conversion</a>
-					<small class="counter">11</small>
 				</li>
 			</ul>
 		</div>
@@ -174,61 +159,62 @@
 		</div>
 
 		<!-- area converter -->
-		<div data-role="page" data-theme="a" id="area-converter" style="background: url('http://assets.codiqa.com/ps/26635/77f03564033d02e8bg.gif') repeat">
+		<div data-role="page" data-theme="a" id="area-converter" >
 
             <div data-theme="a" data-role="header">
-                <h1>
+                <a href="#page1" data-icon="home">Home</a>
+				<h1>
                     Area
                 </h1>
+			<a href="#page3" data-icon="back" data-theme="b">Back</a>	
             </div>
 			
 			
 		<div data-role="content" style="padding: 15px">
 
 			<form id="area_calc_form"  action="/">
-
-				<div data-role="fieldcontain" data-theme="a">
+				<div data-role="fieldcontain">
 					<label for="sq_centimeters">sq. centimeters:</label>
-					<input type="number" id="sq_centimeters" multiplier="1"  name="sq_centimeters">
+					<input type="number" id="sq_centimeters" multiplier="1" class="input" name="sq_centimeters">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">sq. meters: </label>
+				<div data-role="fieldcontain" >
+					<label for="sq_meters">sq. meters: </label>
 					<input type="number" id="sq_meters" multiplier="10000" class="input" name="sq_meters">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">hectare: </label>
+				<div data-role="fieldcontain" >
+					<label for="hectares">hectare: </label>
 					<input type="number" id="hectares" multiplier="100000000" class="input" name="hectares">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">sq. kilometers: </label>
+				<div data-role="fieldcontain" >
+					<label for="sq_kilometers">sq. kilometers: </label>
 					<input type="number" id="sq_kilometers" multiplier="10000000000" class="input" name="sq_kilometers">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">sq. inches: </label>
+				<div data-role="fieldcontain" >
+					<label for="sq_inches">sq. inches: </label>
 					<input type="number" id="sq_inches" multiplier="6.4516" class="input" name="sq_inches">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">sq. feet: </label>
+				<div data-role="fieldcontain" >
+					<label for="sq_feet">sq. feet: </label>
 					<input type="number" id="sq_feet" multiplier="929.0304" class="input" name="sq_feet">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">sq. yards: </label>
+				<div data-role="fieldcontain" >
+					<label for="sq_yards">sq. yards: </label>
 					<input type="number" id="sq_yards" multiplier="8361.2736" class="input" name="sq_yards">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">sq. miles: </label>
+				<div data-role="fieldcontain" >
+					<label for="sq_miles">sq. miles: </label>
 					<input type="number" id="sq_miles" multiplier="25899881103" class="input" name="sq_miles">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">acres: </label>
+				<div data-role="fieldcontain" >
+					<label for="acres">acres: </label>
 					<input type="number" id="acres" multiplier="40468564.224" class="input" name="acres">
 				</div>
 			</form>
@@ -236,64 +222,65 @@
 		</div>
 
 		<!-- length converter -->
-		<div data-role="page" data-theme="a" id="length-converter" style="background: url('http://assets.codiqa.com/ps/26635/77f03564033d02e8bg.gif') repeat">
+		<div data-role="page" data-theme="a" id="length-converter" >
 
 			<div data-theme="a" data-role="header">
+				<a href="#page1" data-icon="home">Home</a>
 				<h1>Length</h1>
-				<a class="button back" href="#">Back</a>
+				<a href="#page3" data-icon="back" data-theme="b">Back</a>
 			</div>
 
 			
 			<div data-role="content" style="padding: 15px">
 
 			<form id="length_calc_form" class="calc_form" action="/">
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">millimeters: </label>
+				<div data-role="fieldcontain" >
+					<label for="millimeter">millimeters: </label>
 					<input type="number" id="millimeter" multiplier="1" class="input" name="millimeter">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">centimeters: </label>
+				<div data-role="fieldcontain" >
+					<label for="centimeter">centimeters: </label>
 					<input type="number" id="centimeter" multiplier="10" class="input" name="centimeter">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">inches: </label>
+				<div data-role="fieldcontain" >
+					<label for="inch">inches: </label>
 					<input type="number" id="inch" multiplier="25.4" class="input" name="inch">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">feet: </label>
+				<div data-role="fieldcontain" >
+					<label for="foot">feet: </label>
 					<input type="number" id="foot" multiplier="304.8" class="input" name="foot">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">yards: </label>
+				<div data-role="fieldcontain" >
+					<label for="yard">yards: </label>
 					<input type="number" id="yard" multiplier="914.39" class="input" name="yard">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">meters: </label>
+				<div data-role="fieldcontain" >
+					<label for="meter">meters: </label>
 					<input type="number" id="meter" multiplier="1000" class="input" name="meter">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
+				<div data-role="fieldcontain" >
 					<label for="title">fathoms: </label>
 					<input type="number" id="fathom" multiplier="1828.8" class="input" name="fathom">
 				</div>
 	
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">kilometers: </label>
+				<div data-role="fieldcontain" >
+					<label for="kilometer">kilometers: </label>
 					<input type="number" id="kilometer" multiplier="1000000" class="input" name="kilometer">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">miles: </label>
+				<div data-role="fieldcontain" >
+					<label for="mile">miles: </label>
 					<input type="number" id="mile" multiplier="1609344" class="input" name="mile">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title" style="font-size:95%;">nautical miles: </label>
+				<div data-role="fieldcontain" >
+					<label for="nautical-mile" style="font-size:95%;">nautical miles: </label>
 					<input type="number" id="nautical-mile" multiplier="1852000" class="input" name="nautical-mile">
 				</div>
 			</form>
@@ -301,54 +288,55 @@
 		</div>
 
 		<!-- liquid measurements converter -->
-		<div data-role="page" data-theme="a" id="liquid-converter" style="background: url('http://assets.codiqa.com/ps/26635/77f03564033d02e8bg.gif') repeat">
+		<div data-role="page" data-theme="a" id="liquid-converter" >
 
 			<div data-theme="a" data-role="header">
+				<a href="#page1" data-icon="home">Home</a>
 				<h1>Liquid</h1>
-				<a class="button back" href="#">Back</a>
+				<a href="#page3" data-icon="back" data-theme="b">Back</a>
 			</div>
 			
 			
 			<div data-role="content" style="padding: 15px">
 
 			<form id="liquid_calc_form" class="calc_form" action="/">
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">tea spoon (tsp): </label>
+				<div data-role="fieldcontain" >
+					<label for="tsp">tea spoon (tsp): </label>
 					<input type="number" id="tsp" multiplier="1" class="input" name="tsp">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">table spoon (tbsp): </label>
+				<div data-role="fieldcontain" >
+					<label for="tbsp">table spoon (tbsp): </label>
 					<input type="number" id="tbsp" multiplier="3" class="input" name="tbsp">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">fluid ounce (fl oz): </label>
+				<div data-role="fieldcontain" >
+					<label for="floz">fluid ounce (fl oz): </label>
 					<input type="number" id="floz" multiplier="6" class="input" name="floz">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">cups: </label>
+				<div data-role="fieldcontain" >
+					<label for="cups">cups: </label>
 					<input type="number" id="cups" multiplier="48" class="input" name="cups">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">pints (pt): </label>
+				<div data-role="fieldcontain" >
+					<label for="pt">pints (pt): </label>
 					<input type="number" id="pt" multiplier="96" class="input" name="pt">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">quarts (qt): </label>
+				<div data-role="fieldcontain" >
+					<label for="qt">quarts (qt): </label>
 					<input type="number" id="qt" multiplier="192" class="input" name="qt">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">litre (l): </label>
+				<div data-role="fieldcontain" >
+					<label for="litre">litre (l): </label>
 					<input type="number" id="litre" multiplier="202.875" class="input" name="litre">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">gallon (gal): </label>
+				<div data-role="fieldcontain" >
+					<label for="gal">gallon (gal): </label>
 					<input type="number" id="gal" multiplier="768" class="input" name="gal">
 				</div>
 
@@ -358,39 +346,40 @@
 		</div>
 
 		<!-- pressure converter -->
-		<div data-role="page" data-theme="a" id="pressure-converter" style="background: url('http://assets.codiqa.com/ps/26635/77f03564033d02e8bg.gif') repeat">
+		<div data-role="page" data-theme="a" id="pressure-converter" >
 
 			 <div data-theme="a" data-role="header">
+				<a href="#page1" data-icon="home">Home</a>
 				<h1>Pressure</h1>
-				<a class="button back" href="#">Back</a>
+				<a href="#page3" data-icon="back" data-theme="b">Back</a>
 			</div>
 			
 			<div data-role="content" style="padding: 15px">
 
 			<form id="pressure_calc_form" class="calc_form" action="/">
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">mbar: </label>
+				<div data-role="fieldcontain" >
+					<label for="mbar">mbar: </label>
 					<input type="number" id="mbar" multiplier="1" class="input" name="mbar">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">kPa: </label>
+				<div data-role="fieldcontain" >
+					<label for="kPa">kPa: </label>
 					<input type="number" id="kPa" multiplier="10" class="input" name="kPa">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">psi: </label>
+				<div data-role="fieldcontain" >
+					<label for="psi">psi: </label>
 					<input type="number" id="psi" multiplier="68.9475" class="input" name="psi">
 				</div>
 
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">bar: </label>
+				<div data-role="fieldcontain" >
+					<label for="bar">bar: </label>
 					<input type="number" id="bar" multiplier="1000" class="input" name="bar">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">MPa: </label>
+				<div data-role="fieldcontain" >
+					<label for="Mpa">MPa: </label>
 					<input type="number" id="Mpa" multiplier="10000" class="input" name="Mpa">
 				</div>
 			</form>
@@ -399,38 +388,39 @@
 		</div>
 
 		<!-- temperature -->
-		<div data-role="page" data-theme="a" id="temperature-converter" style="background: url('http://assets.codiqa.com/ps/26635/77f03564033d02e8bg.gif') repeat">
+		<div data-role="page" data-theme="a" id="temperature-converter" >
 
 			 <div data-theme="a" data-role="header">
+				<a href="#page1" data-icon="home">Home</a>
 				<h1>Temperature</h1>
-				<a class="button back" href="#">Back</a>
+				<a href="#page3" data-icon="back" data-theme="b">Back</a>
 			</div>
 			
 			<div data-role="content" style="padding: 15px">
 
 			<form id="temp_calc_form" class="calc_form" action="/">
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">celsius (c): </label>
+				<div data-role="fieldcontain" >
+					<label for="celsius">celsius (c): </label>
 					<input type="number" id="celsius" class="input" name="celsius">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">fahrenheit (f): </label>
+				<div data-role="fieldcontain" >
+					<label for="fahrenheit">fahrenheit (f): </label>
 					<input type="number" id="fahrenheit" class="input" name="fahrenheit">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">kelvin (k): </label>
+				<div data-role="fieldcontain" >
+					<label for="kelvin">kelvin (k): </label>
 					<input type="number" id="kelvin" class="input" name="kelvin">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">rankine: </label>
+				<div data-role="fieldcontain" >
+					<label for="rankine">rankine: </label>
 					<input type="number" id="rankine" class="input" name="rankine">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">reaumur (r): </label>
+				<div data-role="fieldcontain" >
+					<label for="reaumur">reaumur (r): </label>
 					<input type="number" id="reaumur" class="input" name="reaumur">
 				</div>
 
@@ -440,54 +430,55 @@
 		</div>
 
 		<!-- time converter -->
-		<div data-role="page" data-theme="a" id="time-converter" style="background: url('http://assets.codiqa.com/ps/26635/77f03564033d02e8bg.gif') repeat">
+		<div data-role="page" data-theme="a" id="time-converter" >
 
 			<div data-theme="a" data-role="header">
+				<a href="#page1" data-icon="home">Home</a>
 				<h1>Time</h1>
-				<a class="button back" href="#">Back</a>
+				<a href="#page3" data-icon="back" data-theme="b">Back</a>
 			</div>
 			
 			
 			<div data-role="content" style="padding: 15px">
 
 			<form id="time_calc_form" class="calc_form" action="/">
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">cycles (Hz): </label>
+				<div data-role="fieldcontain" >
+					<label for="cycles">cycles (Hz): </label>
 					<input type="number" id="cycles" multiplier="1" class="input" name="cycles">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">milliseconds: </label>
+				<div data-role="fieldcontain" >
+					<label for="milliseconds">milliseconds: </label>
 					<input type="number" id="milliseconds" multiplier="1000" class="input" name="milliseconds">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">seconds: </label>
+				<div data-role="fieldcontain" >
+					<label for="seconds">seconds: </label>
 					<input type="number" id="seconds" multiplier="1000000" class="input" name="seconds">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">minutes: </label>
+				<div data-role="fieldcontain" >
+					<label for="minutes">minutes: </label>
 					<input type="number" id="minutes" multiplier="60000000" class="input" name="minutes">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">hours: </label>
+				<div data-role="fieldcontain" >
+					<label for="hours">hours: </label>
 					<input type="number" id="hours" multiplier="3600000000" class="input" name="hours">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">days: </label>
+				<div data-role="fieldcontain" >
+					<label for="days">days: </label>
 					<input type="number" id="days" multiplier="86400000000" class="input" name="days">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">weeks: </label>
+				<div data-role="fieldcontain" >
+					<label for="weeks">weeks: </label>
 					<input type="number" id="weeks" multiplier="604800000000" class="input" name="weeks">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">months: </label>
+				<div data-role="fieldcontain" >
+					<label for="months">months: </label>
 					<input type="number" id="months" multiplier="2629670400000" class="input" name="months">
 				</div>
 
@@ -497,11 +488,12 @@
 		</div>
 
 		<!-- velocity converter -->
-		<div data-role="page" data-theme="a" id="velocity-converter" style="background: url('http://assets.codiqa.com/ps/26635/77f03564033d02e8bg.gif') repeat">
+		<div data-role="page" data-theme="a" id="velocity-converter" >
 
 			 <div data-theme="a" data-role="header">
+				<a href="#page1" data-icon="home">Home</a>
 				<h1>Velocity</h1>
-				<a class="button back" href="#">Back</a>
+				<a href="#page3" data-icon="back" data-theme="b">Back</a>
 			</div>
 			
 			
@@ -509,23 +501,23 @@
 
 			<form id="velocity_calc_form" class="calc_form" action="/">
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">fps (ft/sec): </label>
+				<div data-role="fieldcontain" >
+					<label for="fps">fps (ft/sec): </label>
 					<input type="number" id="fps" multiplier="1.09728 " class="input" name="fps">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">mph: </label>
+				<div data-role="fieldcontain" >
+					<label for="mph">mph: </label>
 					<input type="number" id="mph" multiplier="1.609344" class="input" name="mph">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">km/h: </label>
+				<div data-role="fieldcontain" >
+					<label for="kmh">km/h: </label>
 					<input type="number" id="kmh" multiplier="1" class="input" name="kmh">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">knots: </label>
+				<div data-role="fieldcontain" >
+					<label for="knots">knots: </label>
 					<input type="number" id="knots" multiplier="1.852" class="input" name="knots">
 				</div>
 
@@ -535,69 +527,70 @@
 		</div>
 
 		<!-- weight converter -->
-		<div data-role="page" data-theme="a" id="weight-converter" style="background: url('http://assets.codiqa.com/ps/26635/77f03564033d02e8bg.gif') repeat">
+		<div data-role="page" data-theme="a" id="weight-converter" >
 
 			<div data-theme="a" data-role="header">
+				<a href="#page1" data-icon="home">Home</a>
 				<h1>Weight</h1>
-				<a class="button back" href="#">Back</a>
+				<a href="#page3" data-icon="back" data-theme="b">Back</a>
 			</div>
 			
 			
 			<div data-role="content" style="padding: 15px">
 
 			<form id="weight_calc_form" class="calc_form" action="/">
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">micrograms: </label>
+				<div data-role="fieldcontain" >
+					<label for="micrograms">micrograms: </label>
 					<input type="number" id="micrograms" multiplier="1" class="input" name="milligrams">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">milligrams: </label>
+				<div data-role="fieldcontain" >
+					<label for="milligrams">milligrams: </label>
 					<input type="number" id="milligrams" multiplier="1000" class="input" name="milligrams">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">carats: </label>
+				<div data-role="fieldcontain" >
+					<label for="carats">carats: </label>
 					<input type="number" id="carats" multiplier="200000" class="input" name="carats">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">grams: </label>
+				<div data-role="fieldcontain" >
+					<label for="grams">grams: </label>
 					<input type="number" id="grams" multiplier="1000000" class="input" name="grams">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">ounces: </label>
+				<div data-role="fieldcontain" >
+					<label for="ounces">ounces: </label>
 					<input type="number" id="ounces" multiplier="28349523" class="input" name="ounces">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">pounds: </label>
+				<div data-role="fieldcontain" >
+					<label for="pounds">pounds: </label>
 					<input type="number" id="pounds" multiplier="453592370" class="input" name="pounds">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">kilograms: </label>
+				<div data-role="fieldcontain" >
+					<label for="kilograms">kilograms: </label>
 					<input type="number" id="kilograms" multiplier="1000000000" class="input" name="kilograms">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">stones: </label>
+				<div data-role="fieldcontain" >
+					<label for="stones">stones: </label>
 					<input type="number" id="stones" multiplier="6350293000" class="input" name="stones">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">metric tons: </label>
+				<div data-role="fieldcontain" >
+					<label for="metric-tons">metric tons: </label>
 					<input type="number" id="metric-tons" multiplier="1000000000000" class="input" name="metric-tons">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">short tons: </label>
+				<div data-role="fieldcontain" >
+					<label for="short-tons">short tons: </label>
 					<input type="number" id="short-tons" multiplier="907184740000" class="input" name="short-tons">
 				</div>
 
-				<div data-role="fieldcontain" data-theme="a">
-					<label for="title">long tons: </label>
+				<div data-role="fieldcontain" >
+					<label for="long-tons">long tons: </label>
 					<input type="number" id="long-tons" multiplier="1016046908800" class="input" name="long-tons">
 				</div>
 
@@ -609,19 +602,22 @@
         <!-- Hand Signals -->
         <div data-role="page" id="page8">
             <div data-theme="a" data-role="header">
+			<a href="#page1" data-icon="home">Home</a>
                 <h3>
                     Hand Signals
                 </h3>
+			<a href="#page13" data-icon="back" data-theme="b">Back</a>
             </div>
             <div data-role="content" style="padding: 0px">
                 <div style=" text-align:center">
-                    <img style="width: 100%; height: 100%" src="http://assets.codiqa.com/ps/26635/7839e0496e59b5ffhandsignals.jpg" />
+                    <img style="width: 100%; height: 100%" src="images/handsignals.jpg" />
                 </div>
             </div>
         </div>
         <!-- Coupling Alignment -->
-        <div data-role="page" data-theme="a" id="page9" style="background: url('http://assets.codiqa.com/ps/26635/77f03564033d02e8bg.gif') repeat">
+        <div data-role="page" data-theme="a" id="page9" >
             <div data-theme="a" data-role="header">
+			<a href="#page1" data-icon="home">Home</a>
                 <h3>
                     Coupling Alignment
                 </h3>
@@ -641,7 +637,7 @@
                             <label for="percentage">
                                 Distance To Pad
                             </label>
-                            <input id="percentage" placeholder="" value="" type="number" step="0.001" />
+                            <input id="percentage" placeholder="" value="" type="number" step="0.001" min="0"/>
                         </fieldset>
                     </div>
                     <div data-role="fieldcontain">
@@ -649,73 +645,90 @@
                             <label for="tip">
                                 Coupling Diameter
                             </label>
-                            <input id="tip" placeholder="" value="" type="number" step="0.001"/>
+                            <input id="tip" placeholder="" value="" type="number" step="0.001" min="0"/>
                         </fieldset>
                     </div>
-                    	<div class="ui-body ui-body-b">
-							<fieldset class="ui-grid-a">
-									<div class="ui-block-a"><button id="reset" data-theme="d">reset</button></div>
-									<div class="ui-block-b"><button id="submit" type="submit" data-theme="a" name="submit" >Submit</button></div>
-							</fieldset>
-						</div>
+								
+                    <div class="ui-grid-a">
+						<div class="ui-block-a"><button id="reset" data-theme="c">Reset</button></div>
+						<div class="ui-block-b"><button id="submit" type="submit" data-theme="b" name="submit" >Submit</button></div>
+					</div>
 
 					<div data-role="fieldcontain">
                         <fieldset data-role="controlgroup">
                             <label for="shimchange">
                                 Shim Change
                             </label>
-                            <input id="total" placeholder=""  name="total"type="number" disabled="disabled"/>
+                            <input id="total" placeholder=""  name="total" type="number" disabled="disabled"/>
                         </fieldset>
                     </div>
-								<script type="text/javascript"><!--
-// define a function to perform our calculation.
-function calculate () {
-    // retrieve the values from the amount and percentage fields
-    // and store them in variables.
-    var amount = $('#amount').val();
-    var percentage = $('#percentage').val();
-    var tip = $('#tip').val();
-    
-    // also calculate the total.
-    
-    // Note the 'Number' function: amount is actually a string
-    // and adding a number to a string just makes a longer
-    // string, so we convert it to a number first.
-    var total = Number(amount) * percentage /tip;
-    
-    // Store the values in the result fields
-    
-    // Note that we call the 'toFixed' function,
-    // which is a property of all numbers. This
-    // makes sure there are only two digits after
-    // the decimal point.
-    $('#total').val( total.toFixed(3) );
-    
-    // submit event fucntions must return false,
-    // to tell the browser not to load a new page.
-    return false;
-}
+				
+	        <script type="text/javascript"><!--
+				// define a function to perform our calculation.
+				function calculate () {
+					// retrieve the values from the amount and percentage fields
+					// and store them in variables.
+					var amount = $('#amount').val();
+					var percentage = $('#percentage').val();
+					var tip = $('#tip').val();
+					
+					// also calculate the total.
+					
+					// Note the 'Number' function: amount is actually a string
+					// and adding a number to a string just makes a longer
+					// string, so we convert it to a number first.
+					var total = Number(amount) * percentage /tip;
+					
+					// Store the values in the result fields
+					
+					// Note that we call the 'toFixed' function,
+					// which is a property of all numbers. This
+					// makes sure there are only two digits after
+					// the decimal point.
+					$('#total').val( total.toFixed(3) );
+					
+					// submit event fucntions must return false,
+					// to tell the browser not to load a new page.
+					return false;
+				}
 
-// attach our function to the form's submit event.
-$('#calculator').submit( calculate );
-$('#reset').click(function() {
-    $('#amount').val('0').number('refresh');
-    $('#percentage').val('0').number('refresh');
-    $('#tip').val('0').number('refresh');
-	$('#total').val('0').number('refresh');
-});
+				// attach our function to the form's submit event.
+				$('#calculator').submit( calculate );
+				$('#reset').click(function() {
+					$('#amount').val('0').number('refresh');
+					$('#percentage').val('0').number('refresh');
+					$('#tip').val('0').number('refresh');
+					$('#total').val('0').number('refresh');
+				});
 
-							// --></script>
-				</form>
+			</script>
+				</form>	
             </div>
         </div>
         <!-- Overhead Conveyor -->
-        <div data-role="page" data-theme="a" id="page10" style="background: url('http://assets.codiqa.com/ps/26635/77f03564033d02e8bg.gif') repeat">
+        <div data-role="page" data-theme="a" id="page10" >
             <div data-theme="a" data-role="header">
+			<a href="#page1" data-icon="home">Home</a>
                 <h3>
                     Overhead Conveyor
                 </h3>
             </div>
+			
+				<div class="ad_container">
+						<div class="ad_container_script">
+							<script type="text/javascript"><!--
+							google_ad_client = "ca-pub-8682512281936420";
+							/* millwright */
+							google_ad_slot = "7124628988";
+							google_ad_width = 320;
+							google_ad_height = 50;
+							google_ad_type = "image";
+							//-->
+							</script>
+							<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+							</script>
+						</div>
+				</div>		
             <div data-role="content" style="padding: 15px">
                 <ul data-role="listview" data-divider-theme="e" data-inset="true">
                     <li data-theme="a">
@@ -732,8 +745,9 @@ $('#reset').click(function() {
             </div>
         </div>
         <!-- Cross Brace -->
-        <div data-role="page" id="page11" style="background: url('http://assets.codiqa.com/ps/26635/77f03564033d02e8bg.gif') repeat">
+        <div data-role="page" id="page11" >
             <div data-theme="a" data-role="header">
+			<a href="#page1" data-icon="home">Home</a>
                 <h3>
                     Cross Brace
                 </h3>
@@ -742,8 +756,9 @@ $('#reset').click(function() {
             </div>
         </div>
         <!-- Dip Plug -->
-        <div data-role="page" id="page12" style="background: url('http://assets.codiqa.com/ps/26635/77f03564033d02e8bg.gif') repeat">
+        <div data-role="page" id="page12" >
             <div data-theme="a" data-role="header">
+			<a href="index.html" data-icon="home">Home</a>
                 <h3>
                     Dip Plug
                 </h3>
@@ -752,11 +767,28 @@ $('#reset').click(function() {
             </div>
         </div>
         <!-- Rigging -->
-        <div data-role="page" data-theme="a" id="page13" style="background: url('http://assets.codiqa.com/ps/26635/77f03564033d02e8bg.gif') repeat">
+        <div data-role="page" data-theme="a" id="page13" >
             <div data-theme="a" data-role="header" >
-                    Rigging
+				<a href="#page1" data-icon="home">Home</a>
+                <h3>
+				Rigging
                 </h3>
             </div>
+				<div class="ad_container">
+						<div class="ad_container_script">
+							<script type="text/javascript"><!--
+							google_ad_client = "ca-pub-8682512281936420";
+							/* millwright */
+							google_ad_slot = "7124628988";
+							google_ad_width = 320;
+							google_ad_height = 50;
+							google_ad_type = "image";
+							//-->
+							</script>
+							<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+							</script>
+						</div>
+				</div>		
             <div data-role="content" style="padding: 15px">
                 <ul data-role="listview" data-divider-theme="e" data-inset="true">
                     <li data-theme="a">
@@ -765,12 +797,12 @@ $('#reset').click(function() {
                         </a>
                     </li>
                     <li data-theme="a">
-                        <a href="#page12" data-transition="slide">
+                        <a href="#page14" data-transition="slide">
                             Chain Load Limits
                         </a>
                     </li>
                     <li data-theme="a">
-                        <a href="#page8" data-transition="slide">
+                        <a href="#page16" data-transition="slide">
                             Wire Rope Load Limits
                         </a>
                     </li>
@@ -780,50 +812,69 @@ $('#reset').click(function() {
         <!-- Chain Load -->
         <div data-role="page" id="page14">
             <div data-theme="a" data-role="header">
-                <h3>
+				<a href="#page1" data-icon="home">Home</a>
+			    <h3>
                     Chain Load
                 </h3>
+				<a href="#page13" data-icon="back" data-theme="b">Back</a>
             </div>
             <div data-role="content" style="padding: 0px">
                 <div style=" text-align:center">
-                    <img style="width: 100%; height: px" src="http://assets.codiqa.com/ps/26635/0299b72731607d2fscreenshot2.jpg" />
+                    <img style="width: 100%; height: px" src="images/screenshot2.jpg" />
                 </div>
             </div>
         </div>
         <!-- Standard Torque -->
         <div data-role="page" id="page15">
             <div data-theme="a" data-role="header">
+				<a href="index.html" data-icon="home">Home</a>			
                 <h3>
                     Standard
                 </h3>
+				<a href="#page17" data-icon="back" data-theme="b">Back</a>
             </div>
             <div data-role="content" style="padding: 0px">
  
                 <div style="">
-                    <img style="width: 100%; height: px" src="http://assets.codiqa.com/ps/26635/c33a24e293e657d0fastener-torque-charts-1024x750.jpg" />
+                    <img style="width: 100%; height: px" src="images/fastener.jpg" />
                 </div>
             </div>
         </div>
         <!-- Wire Rope -->
         <div data-role="page" id="page16">
             <div data-theme="a" data-role="header">
+				<a href="#page1" data-icon="home">Home</a>
                 <h3>
                     Wire Chocker
                 </h3>
+				<a href="#page13" data-icon="back" data-theme="b">Back</a>
             </div>
             <div data-role="content" style="padding: 0px">
                 <div style=" text-align:center">
-                    <img style="width: 100%; height: px" src="http://assets.codiqa.com/ps/26635/0299b72731607d2fscreenshot2.jpg" />
+                    <img style="width: 100%; height: px" src="images/screenshot2.jpg" />
                 </div>
             </div>
         </div>
         <!-- Torque Charts -->
-        <div data-role="page" data-theme="a" id="page17" style="background: url('http://assets.codiqa.com/ps/26635/77f03564033d02e8bg.gif') repeat">
+        <div data-role="page" data-theme="a" id="page17" >
             <div data-theme="a" data-role="header">
+				<a href="#page1" data-icon="home">Home</a>			
                 <h3>
-                    Rigging
+                    Torque
                 </h3>
             </div>
+			
+				<script type="text/javascript"><!--
+				google_ad_client = "ca-pub-8682512281936420";
+				/* millwright */
+				google_ad_slot = "7124628988";
+				google_ad_width = 320;
+				google_ad_height = 50;
+				//-->
+				</script>
+				<script type="text/javascript"
+				src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+				</script>	
             <div data-role="content" style="padding: 15px">
                 <ul data-role="listview" data-divider-theme="e" data-inset="true">
                     <li data-theme="a">
@@ -842,41 +893,38 @@ $('#reset').click(function() {
         <!-- Starrett Drill Tap -->
         <div data-role="page" id="page19">
             <div data-theme="a" data-role="header">
+				<a href="index.html" data-icon="home">Home</a>
                 <h3>
                     Drill Tap
                 </h3>
             </div>
             <div data-role="content" style="padding: 0px">
                 <div style=" text-align:center">
-                    <img style="width: 100%; height: px" src="http://assets.codiqa.com/ps/26635/f10408f6fb29a223StarrettDecimalEquiv&amp;TapDrillSizes-2.JPG" />
+                    <img style="width: 100%; height: px" src="images/Starrett.JPG" />
                 </div>
             </div>
         </div>
         <!-- Metric Torque Charts -->
         <div data-role="page" id="page18">
             <div data-theme="a" data-role="header">
+				<a href="index.html" data-icon="home">Home</a>
                 <h3>
                     Metric
                 </h3>
+				<a href="#page17" data-icon="back" data-theme="b">Back</a>
             </div>
             <div data-role="content" style="padding: 0px">
                 <div style=" text-align:center">
-                    <img style="width: 100%; height: px" src="http://assets.codiqa.com/ps/26635/ef9007173312b1ebmetrictorque.jpg" />
+                    <img style="width: 100%; height: px" src="images/metrictorque.jpg" />
                 </div>
             </div>
         </div>
-        <script>
-$(function() {
-  setTimeout(hideSplash, 5000);
-});
+		
 
-function hideSplash() {
-  $.mobile.changePage("#page1", "fade");
-}
-        </script>
-		<script src="ycomp.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/ycomp.js" type="text/javascript" charset="utf-8"></script>
 		<!-- for dev... 
-		<script src="converter.js" type="text/javascript" charset="utf-8"></script>		
+		<script src="js/converter.js" type="text/javascript" charset="utf-8"></script>	
+
 		
     </body>
 </html>
